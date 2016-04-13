@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- The title of the activity, aligning to the top of the parent
+       relativelayout -->
+  <LinearLayout
+      android:paddingTop="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentTop="true">
+    <TextView
+        android:paddingBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户注册"
+        android:textSize="24sp"
+        android:textColor="#FF530D"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+  </LinearLayout>
+
+  <!-- The register items to register a user for Academics, center in
+       the parent relativelayout -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_centerInParent="true"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp">
+    <!-- The setting of the user name-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/user_name_register"
+          android:textSize="16sp"/>
+      <EditText
+          android:id="@+id/userName_register"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:layout_weight="1"/>
+    </LinearLayout>
+    <!-- The sex of the user-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/sex"
+          android:textSize="16sp"
+          android:layout_gravity="center"/>
+      <RadioGroup
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_weight="1"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textSize="16sp"
+            android:checked="true"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/female"
+            android:paddingLeft="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+      </RadioGroup>
+    </LinearLayout>
+    <!-- The setting of the password -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/password_register"
+          android:textSize="16sp"/>
+      <EditText
+          android:id="@+id/password_register"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:layout_weight="1"
+          android:password="true"/>
+    </LinearLayout>
+    <!-- Where to repeat the password to ensure it-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/repeat_password"
+          android:textSize="16sp"/>
+      <EditText
+          android:id="@+id/password_repeat"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:layout_weight="1"
+          android:password="true"/>
+    </LinearLayout>
+    <!--Show error messages when the repeated password is not same with
+    the first password-->
+    <TextView
+        android:id="@+id/errorMessage_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:text=""/>
+    <!-- The organization of the user-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/organization"
+          android:textSize="16sp"/>
+      <EditText
+          android:id="@+id/organization"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="16sp"
+          android:layout_weight="1"/>
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingLeft="64dp"
+      android:paddingRight="64dp"
+      android:paddingBottom="16dp"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完成注册"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onRegisterFinishedButtonClicked"/>
+  </LinearLayout>
+</RelativeLayout>

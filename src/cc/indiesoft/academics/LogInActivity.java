@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.text.Editable;
+import android.content.Intent;
 
 public class LogInActivity extends Activity
 {
@@ -44,5 +44,12 @@ public class LogInActivity extends Activity
         {
             errorMessage_TextView.setText("用户名或密码错误");
         }
+    }
+
+    public void onRegisterButtonClicked(View view)
+    {
+        Intent intent = new Intent();
+        intent.setClass(LogInActivity.this, RegisterActivity.class);
+        startActivity(intent);
     }
 }
