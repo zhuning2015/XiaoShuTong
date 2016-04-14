@@ -89,4 +89,10 @@
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
+    <target name="-pre-compile">
+      <echo> "load android-support-v4" </echo>
+      <path id="project.all.jars.path">
+        <path path="${sdk.dir}/extras/android/support/v4/android-support-v4.jar"/>
+      </path>
+    </target>
 </project>

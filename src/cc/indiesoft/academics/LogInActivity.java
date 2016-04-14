@@ -19,7 +19,7 @@ public class LogInActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.login);
 
         userName_EditText = (EditText)findViewById(R.id.userName);
         password_EditText = (EditText)findViewById(R.id.password);
@@ -43,7 +43,12 @@ public class LogInActivity extends Activity
         }else
         {
             errorMessage_TextView.setText("用户名或密码错误");
+            return;
         }
+
+        Intent intent = new Intent();
+        intent.setClass(LogInActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void onRegisterButtonClicked(View view)
