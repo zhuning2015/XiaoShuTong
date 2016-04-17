@@ -13,28 +13,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="文献管理"
+        android:text="返回"
         android:textSize="12sp"
         android:layout_weight="1"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:onClick="onReturn"/>
     <TextView
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我的论文"
+        android:text="投稿中"
         android:textSize="24sp"
         android:layout_weight="2"
         android:layout_gravity="center_vertical"
         android:gravity="center"/>
     <Button
-        android:id="@+id/submission_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="在审论文"
+        android:text="刷新"
         android:textSize="12sp"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical"/>
+        android:layout_weight="1"/>
   </LinearLayout>
   <ListView
       android:id="@android:id/list"
