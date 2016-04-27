@@ -20,5 +20,14 @@
         <activity android:name="SubmissionActivity"
                   android:label="@string/app_name">
         </activity>
+        <activity android:name="LiteratureActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name="LiteratureImportActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name="SearchLiteratureOnlineActivity"
+                  android:label="@string/app_name">
+        </activity>
     </application>
 </manifest>

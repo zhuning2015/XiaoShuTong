@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import cc.indiesoft.academics.R;
 import cc.indiesoft.academics.Paper;
 import cc.indiesoft.academics.SubmissionActivity;
+import cc.indiesoft.academics.LiteratureActivity;
 
 public class PaperFragment extends ListFragment
 {
@@ -61,6 +62,18 @@ public class PaperFragment extends ListFragment
             {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), SubmissionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button literatureBtn = (Button)getActivity().findViewById(R.id.literature_btn);
+        literatureBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), LiteratureActivity.class);
                 startActivity(intent);
             }
         });

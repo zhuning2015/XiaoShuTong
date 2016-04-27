@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -11,38 +10,46 @@
       android:background="#468966"
       android:layout_alignParentTop="true">
     <Button
-        android:id="@+id/literature_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="文献管理"
+        android:text="返回"
         android:textSize="12sp"
         android:layout_weight="1"
-        android:layout_gravity="center_vertical"/>
+        android:layout_gravity="center_vertical"
+        android:onClick="onReturn"/>
     <TextView
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我的论文"
+        android:text="导入文献"
         android:textSize="24sp"
         android:layout_weight="2"
         android:layout_gravity="center_vertical"
         android:gravity="center"/>
-    <Button
-        android:id="@+id/submission_button"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="在审论文"
+        android:text="    "
         android:textSize="12sp"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical"/>
+        android:layout_weight="1"/>
   </LinearLayout>
-  <ListView
-      android:id="@android:id/list"
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
-  <TextView
-      android:id="@android:id/empty"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
-</LinearLayout>
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:orientation="vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本地 >"
+        android:onClick="onLoadFromLocal"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网上搜索 >"
+        android:onClick="onSearchOnInternet"/>
+  </LinearLayout>
+</RelativeLayout>
